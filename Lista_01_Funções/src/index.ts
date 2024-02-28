@@ -96,15 +96,13 @@ Exercício 6
 Implemente uma função que inverta a ordem dos elementos em um array.
 Utilize essa função para inverter a ordem de diferentes conjuntos de elementos.
 */
-function InverterOrdem(...x: number[]){
-    for (let i = 0; i<x.length; i++){
-
-    }
-
-    return x
+function InverterOrdem(...x: any[]): any[]{
+         return x.reverse();
 }
 console.log("Ex 6: Inverter ordem dos elementos em um array");
-console.log(InverterOrdem(1,2,3,4));
+console.log(InverterOrdem(1,2,"teste"));
+console.log(InverterOrdem(2,3,4,"amongus"));
+
 /*
 Exercício 7
 Crie uma função que receba um valor e uma porcentagem como parâmetros. A
