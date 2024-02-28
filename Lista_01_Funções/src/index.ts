@@ -3,7 +3,7 @@ Exercício 1
 Crie uma função que receba uma lista de números como parâmetro e retorne o
 maior número da lista.
 */
-function maiornumero(x: number[]): number{
+function maiornumero(...x: number[]): number{
     let maior: number = x[0];
     for (let i = 0; i<x.length; i++){
         if(x[i] > maior){
@@ -15,7 +15,7 @@ function maiornumero(x: number[]): number{
     
 }
 console.log("Ex 1: O maior numero é: ")
-console.log(maiornumero([2,3,4,454,45,12,12]));
+console.log(maiornumero(2,3,4,454,45,12,12));
 
 /*
 Exercício 2
