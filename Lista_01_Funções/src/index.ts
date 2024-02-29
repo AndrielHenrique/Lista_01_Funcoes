@@ -22,7 +22,7 @@ Exercício 2
 Desenvolva uma função que receba um número como parâmetro e verifique se
 ele é par ou ímpar. Retorne true se for par e false se for ímpar.
 */
-function parouimpar (x: number){
+function parouimpar (x: number): boolean{
     if (x % 2 == 0){
        return true;
     }
@@ -62,7 +62,7 @@ Crie uma função que receba uma string como parâmetro e retorne a mesma
 string com todas as letras em caixa alta. Utilize essa função para converter
 diferentes strings.
 */
-function caixaalta(x: string){
+function caixaalta(x: string): string{
     return x.toUpperCase();
 }
 console.log(caixaalta("Ex 4: Converter para caixa alta"));
@@ -73,7 +73,7 @@ Exercício 5
 Desenvolva uma função que determine se um número é primo ou não. Retorne
 true se for primo e false se não for
 */
-function numeroPrimo (x: number){   
+function numeroPrimo (x: number): boolean{   
     let i = 2;
     while(i<= x/2){
         if(x % i++ == 0){
@@ -123,7 +123,7 @@ Exercício 8
 Crie uma função que receba uma string e retorne a mesma string, mas com as
 palavras em ordem reversa.
 */
-function OrdemReversa(x: string){
+function OrdemReversa(x: string): string{
     return x.split('').reverse().join('');
 }
 console.log("Ex 8: Palavras em ordem reversa");
@@ -136,7 +136,7 @@ Implemente uma função que retorne a soma de todos os números pares em um
 array.
 */
 
-function somapares(...x: number[]){
+function somapares(...x: number[]): number{
     let somar: number = 0;
     let i = 0;
     for(; i < x.length; i++){
@@ -159,6 +159,21 @@ Crie uma função que calcule o fatorial de um número. Utilize essa função pa
 calcular o fatorial de diferentes números.
 */
 
-function Fatorial(x: number){
-    
+function Fatorial(x: number): number{
+    let fat: number = 1;
+    if( x != 1){
+        for( let i = 1; i<=x; i++){
+            fat = i * fat;
+            }
+        return fat;
+    } else {
+          return x; 
+         }
 }
+
+console.log("Ex 10: Fatorial de um numero");
+console.log(Fatorial(1)); //fatorial de 1 é o proprio 1
+console.log(Fatorial(2)); //2
+console.log(Fatorial(5)); //120
+console.log(Fatorial(6)); //720
+console.log(Fatorial(7)); //5040

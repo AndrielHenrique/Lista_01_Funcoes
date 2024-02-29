@@ -143,4 +143,20 @@ Crie uma função que calcule o fatorial de um número. Utilize essa função pa
 calcular o fatorial de diferentes números.
 */
 function Fatorial(x) {
+    let fat = 1;
+    if (x != 1) {
+        for (let i = 1; i <= x; i++) {
+            fat = i * fat;
+        }
+        return fat;
+    }
+    else {
+        return x;
+    }
 }
+console.log("Ex 10: Fatorial de um numero");
+console.log(Fatorial(1)); //fatorial de 1 é o proprio 1
+console.log(Fatorial(2)); //2
+console.log(Fatorial(5)); //120
+console.log(Fatorial(6)); //720
+console.log(Fatorial(7)); //5040
